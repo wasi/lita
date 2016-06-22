@@ -7,7 +7,7 @@ module Lita
       # @param level [Symbol, String] The name of the log level to use.
       # @return [::Logger] The {::Logger} object.
       def get_logger(level, formatter = Lita.config.robot.log_formatter)
-        logger = ::Logger.new("lita.log")
+        logger = ::Logger.new("logs/lita.log")
         logger.level = get_level_constant(level)
         logger.formatter = formatter
         logger
